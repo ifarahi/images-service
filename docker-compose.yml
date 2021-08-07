@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  iservice-api:
+    build: .
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - ./:/home/node/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    depends_on:
+      - iservice-db
+
+  iservice-db:
+    image: mongo
+    volumes:
+      - db_data:/data/db
+
+volumes:
+  db_data:
