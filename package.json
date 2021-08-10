@@ -6,6 +6,10 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "docker:start": "docker-compose up -d",
+    "docker:stop": "docker-compose stop",
+    "docker:logs": "docker-compose logs -f iservice-api",
+    "docker:exec": "docker-compose exec iservice-api bash",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -22,6 +26,7 @@
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
+    "@nestjs/config": "^1.0.1",
     "@nestjs/core": "^8.0.0",
     "@nestjs/mongoose": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
