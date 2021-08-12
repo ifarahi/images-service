@@ -29,6 +29,8 @@ export class UserController {
             map((user) => {
               return {
                 email: user.email,
+                createdAt: user.createdAt,
+                updatedAt: user.updatedAt,
               };
             }),
           );
