@@ -29,6 +29,7 @@ export class UserController {
             map((user) => {
               return {
                 email: user.email,
+                username: user.username,
                 createdAt: user.createdAt,
                 updatedAt: user.updatedAt,
               };
