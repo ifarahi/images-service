@@ -38,7 +38,8 @@ $ npm run docker:exec
 
 ## Environment variables
 
-| Name           | Required | Type      | Default value | Description |
-| -------------- | -------- | --------- | ------------- | ----------- |
-| `PORT`         | true     | `integer` | -             | -           |
-| `DATABASE_URL` | true     | `string`  | -             | -           |
+| Name             | Required | Type      | Default value | Description |
+| ---------------- | -------- | --------- | ------------- | ----------- |
+| `PORT`           | true     | `integer` | -             | -           |
+| `DATABASE_URL`   | true     | `string`  | -             | -           |
+| `JWT_SECRET_KEY` | true     | `string`  | -             | -           |
