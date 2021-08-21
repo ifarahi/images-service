@@ -43,3 +43,47 @@ $ npm run docker:exec
 | `PORT`           | true     | `integer` | -             | -           |
 | `DATABASE_URL`   | true     | `string`  | -             | -           |
 | `JWT_SECRET_KEY` | true     | `string`  | -             | -           |
+
+## Documentation
+
+POST `/users/signup`
+
+Request example
+
+```json
+{
+  "email": "email@gmail.com",
+  "username": "ifarahi",
+  "password": "helloWorld"
+}
+```
+
+Response example
+
+```json
+{
+  "email": "email@gmail.com",
+  "username": "ifarahi",
+  "createdAt": "2021-08-21T22:17:51.548Z",
+  "updatedAt": "2021-08-21T22:17:51.548Z"
+}
+```
+
+POST `/users/login`
+
+Request example
+
+```json
+{
+  "username": "ifarahi",
+  "password": "helloWorld"
+}
+```
+
+Response example
+
+```json
+{
+  "apiKey": "eyJhbGciOiJ..."
+}
+```
