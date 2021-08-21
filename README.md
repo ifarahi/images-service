@@ -68,3 +68,22 @@ Response example
   "updatedAt": "2021-08-21T22:17:51.548Z"
 }
 ```
+
+POST `/users/login`
+
+Request example
+
+```json
+{
+  "username": "ifarahi",
+  "password": "helloWorld"
+}
+```
+
+Response example
+
+```json
+{
+  "apiKey": "eyJhbGciOiJ..."
+}
+```
