@@ -41,7 +41,7 @@ $ npm run docker:exec
 | Name             | Required | Type      | Default value | Description |
 | ---------------- | -------- | --------- | ------------- | ----------- |
 | `PORT`           | true     | `integer` | -             | -           |
-| `DATABASE_URL`   | true     | `string`  | -             | -           |
+| `DB_URL`         | true     | `string`  | -             | -           |
 | `JWT_SECRET_KEY` | true     | `string`  | -             | -           |
 
 ## Documentation
