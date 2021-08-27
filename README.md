@@ -110,3 +110,7 @@ Response example
   "imageUrl": "image-1630076535553-123401023.jpeg"
 }
 ```
+
+## Fetching static image
+
+GET `/static/{imageUrl}`
