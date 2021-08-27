@@ -2,9 +2,16 @@ import { Injectable } from '@nestjs/common';
 import * as fs from 'fs';
 import { diskStorage } from 'multer';
 import { from, map, Observable } from 'rxjs';
+import { UserService } from 'src/user/services/user.service';
 
 @Injectable()
 export class ImageService {
+  constructor(private userService: UserService) {}
+
+  save(id: string, image: string): Observable<any> {
+    return this.userService.addImage(id, image);
+  }
+
   static getStorage(dest: string) {
     return diskStorage({
       destination: this._destination(dest),

@@ -24,7 +24,9 @@ export class AuthGuard implements CanActivate {
     const apiKey = authorizationHeader.split(' ')[1];
 
     try {
-      this.jwtService.verify(apiKey);
+      const payload = this.jwtService.verify(apiKey);
+      request.user = payload;
+
       return true;
     } catch (error) {
       throw new UnauthorizedException('Invalid Api key');
