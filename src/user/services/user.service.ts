@@ -5,7 +5,6 @@ import { from, map, mergeMap, Observable } from 'rxjs';
 import * as bcrypt from 'bcrypt';
 import { User } from '../models/user.model';
 import { SignupDto } from '../sign-up.dto';
-import { LoginResponse } from '../login-response.interface';
 import { JwtService } from '@nestjs/jwt';
 import { jwtPayload } from '../jwt-payload.interface';
 
@@ -30,6 +29,12 @@ export class UserService {
           }),
         );
       }),
+    );
+  }
+
+  addImage(id: string, image: string): Observable<any> {
+    return from(
+      this.userModel.updateOne({ _id: id }, { $push: { images: image } }),
     );
   }
 
