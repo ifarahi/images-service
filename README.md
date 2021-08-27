@@ -88,3 +88,25 @@ Response example
   "apiKey": "eyJhbGciOiJ..."
 }
 ```
+
+POST `/images`
+
+Request example
+
+> Body: form-data
+
+```json
+{
+  "image": "my-image.jpg"
+}
+```
+
+Response example
+
+```json
+{
+  "statusCode": 201,
+  "message": "succussfully uploaded",
+  "imageUrl": "image-1630076535553-123401023.jpeg"
+}
+```
