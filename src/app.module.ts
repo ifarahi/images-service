@@ -3,7 +3,6 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './user/user.module';
 import { ImageModule } from './image/image.module';
-import { JwtModule } from '@nestjs/jwt';
 
 ConfigModule.forRoot();
 
