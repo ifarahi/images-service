@@ -13,7 +13,7 @@ import { ImageService } from './services/image.service';
       secret: process.env.JWT_SECRET_KEY,
     }),
     MulterModule.register({
-      storage: ImageService.getStorage(process.env.UPLOAD_DST),
+      storage: ImageService.getStorage(process.env.UPLOAD_DST || './uploads'),
     }),
     ConfigModule.forRoot(),
   ],
