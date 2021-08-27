@@ -8,7 +8,7 @@ import { UserService } from 'src/user/services/user.service';
 export class ImageService {
   constructor(private userService: UserService) {}
 
-  save(id: string, image: string): Observable<any> {
+  save(id: string, image: string) {
     return this.userService.addImage(id, image);
   }
 

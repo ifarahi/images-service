@@ -32,10 +32,9 @@ export class UserService {
     );
   }
 
-  addImage(id: string, image: string): Observable<any> {
-    return from(
-      this.userModel.updateOne({ _id: id }, { $push: { images: image } }),
-    );
+  addImage(id: string, image: string) {
+    this.userModel.updateOne({ _id: id }, { $push: { images: image } });
+    return image;
   }
 
   existsByEmail(email: string): Observable<boolean> {

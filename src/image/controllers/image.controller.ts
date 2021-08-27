@@ -25,15 +25,11 @@ export class ImageController {
     @UploadedFile('file') file: Express.Multer.File,
     @Req() request: Express.Request,
   ) {
-    return this.imageService.save(request.user.sub, file.filename).pipe(
-      map((result) => {
-        if (result) {
-          return {
-            statusCode: 201,
-            message: 'succussfully uploaded',
-          };
-        }
-      }),
-    );
+    const imageUrl = this.imageService.save(request.user.sub, file.filename);
+    return {
+      statusCode: 201,
+      message: 'succussfully uploaded',
+      imageUrl,
+    };
   }
 }
