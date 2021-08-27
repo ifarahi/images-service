@@ -15,6 +15,9 @@ export class User extends Document {
   @Prop({ default: '' })
   apiKey?: string;
 
+  @Prop({ default: [] })
+  images: string[];
+
   @Prop()
   createdAt?: Date;
 
