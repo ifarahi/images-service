@@ -38,12 +38,12 @@ $ npm run docker:exec
 
 ## Environment variables
 
-| Name             | Required | Type      | Default value | Description                      |
-| ---------------- | -------- | --------- | ------------- | -------------------------------- |
-| `PORT`           | true     | `integer` | -             | -                                |
-| `DB_URL`         | true     | `string`  | -             | -                                |
-| `JWT_SECRET_KEY` | true     | `string`  | -             | -                                |
-| `UPLOAD_DST`     | false    | `string`  | - ./uploads   | - where to store uploaded images |
+| Name             | Required | Type      | Default value | Description                    |
+| ---------------- | -------- | --------- | ------------- | ------------------------------ |
+| `PORT`           | true     | `integer` | -             | -                              |
+| `DB_URL`         | true     | `string`  | -             | -                              |
+| `JWT_SECRET_KEY` | true     | `string`  | -             | -                              |
+| `UPLOAD_DST`     | false    | `string`  | ./uploads     | where to store uploaded images |
 
 ## Documentation
 
